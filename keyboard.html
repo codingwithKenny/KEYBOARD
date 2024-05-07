@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard</title>
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+    <style>
+       .mother{
+        width: 350px;
+        height: 210px;
+        border: thin solid black;
+        margin: 50px auto;
+        background-color: aliceblue;
+       }
+       i{
+        margin-left:20px ;
+        
+       }
+       input{
+        width: 230px;
+        height: 23px;
+        border-radius: 20px;
+        overflow-y: auto;
+        overflow-wrap: break-word;
+       }
+       div i:nth-of-type(2){
+        margin-left: -30px;
+       }
+       .top{
+        margin-top: 10px;
+       }
+       button{
+        width: 30px;
+        border-radius: 5px;
+        background-color: black;
+        color: white;
+        font-size: 18px;
+       }
+       .firstrow{
+        margin-top: 30px;
+        margin-left: 5px;
+       }
+       .secondrow{
+        margin-left: 20px;
+        margin-top: 10px;
+       }
+       .thirdrow{
+        /* margin-left: 50px; */
+        margin-top: 10px;
+       }
+       .thirdrow button:nth-of-type(1){
+           background-color: white;
+           width: 40px;
+           margin-left: 5px;
+       }
+       .thirdrow button i:nth-of-type(1){
+           margin-left: 0;
+           color: black;
+           background-color: white;
+       }
+       .thirdrow button:nth-of-type(2){
+        margin-left: 10px;
+       }
+       .thirdrow button:nth-of-type(9){
+        background-color: white;
+        margin-left: 10px;
+       }
+       .thirdrow button:nth-of-type(9) i{
+        color: black;
+        margin-left: -4px;
+       }
+       .fourthrow{
+        margin-top: 8px;
+        margin-left: 5px;
+       }
+       .fourthrow button:nth-of-type(1){
+        width: 70px;
+       }
+       .fourthrow button:nth-of-type(2){
+        width: 180px;
+       }
+       .fourthrow button:nth-of-type(3){
+        width: 70px;
+       }
+    </style>
+</head>
+<body>
+    <div class="mother">
+        <div class="top">
+            <i class="fa-solid fa-plus"></i>
+            <input type="text" name="" id="box">
+            <i class="fa-regular fa-note-sticky"></i>
+            <i class="fa-solid fa-camera"></i>
+            <i class="fa-solid fa-microphone"></i>
+
+        </div>
+        <div class="firstrow">
+        <button class="alphat" onclick="mytext('Q')">Q</button>
+        <button class="alphat" onclick="mytext('W')">W</button>
+        <button class="alphat" onclick="mytext('E')">E</button>
+        <button class="alphat" onclick="mytext('R')">R</button>
+        <button class="alphat" onclick="mytext('T')">T</button>
+        <button class="alphat" onclick="mytext('Y')">Y</button>
+        <button class="alphat" onclick="mytext('U')">U</button>
+        <button class="alphat" onclick="mytext('I')">I</button>
+        <button class="alphat" onclick="mytext('O')">O</button>
+        <button class="alphat" onclick="mytext('P')">P</button>
+        </div>
+        <div class="secondrow">
+        <button class="alphat" onclick="mytext('A')">A</button>
+        <button class="alphat" onclick="mytext('S')">S</button>
+        <button class="alphat" onclick="mytext('D')">D</button>
+        <button class="alphat" onclick="mytext('F')">F</button>
+        <button class="alphat" onclick="mytext('G')">G</button>
+        <button class="alphat" onclick="mytext('H')">H</button>
+        <button class="alphat" onclick="mytext('J')">J</button>
+        <button class="alphat" onclick="mytext('K')">K</button>
+        <button class="alphat" onclick="mytext('L')">L</button>
+        </div>
+        <div class="thirdrow">
+            <button  onclick="myalphacase()" ><i class="fa-solid fa-up-long"></i></button>
+            <button class="alphat" onclick="mytext('Z')">Z</button>
+            <button class="alphat" onclick="mytext('X')">X</button>
+            <button class="alphat" onclick="mytext('C')">C</button>
+            <button class="alphat" onclick="mytext('V')">V</button>
+            <button class="alphat" onclick="mytext('B')">B</button>
+            <button class="alphat" onclick="mytext('N')">N</button>
+            <button class="alphat" onclick="mytext('M')">M</button>
+            <button onclick="deletetext()"><i class="fa-solid fa-delete-left"></i></button>
+        </div>
+        <div class="fourthrow">
+         <button>123</button>
+         <button onclick="mytext(' ')">Space</button>
+         <button>Return</button>
+        </div>
+
+    </div>
+
+    <!-- JAVASCRIPT -->
+       <script>
+        let upper=true;
+        let textbox = document.getElementById('box')
+          function mytext(Alphabet){
+            textbox.value += upper?Alphabet.toUpperCase():Alphabet.toLowerCase()
+    
+          }
+          function deletetext(){
+            textbox.value = textbox.value.slice(0,-1)
+          }
+          function myalphacase(){
+           
+            upper==true?upper=false:upper=true;
+
+            document.querySelectorAll('.alphat').forEach(el=>{
+                upper==true?el.innerText=el.innerText.toUpperCase():el.innerText=el.innerText.toLowerCase()
+            })
+
+          }
+       </script>
+</body>
+</html>
