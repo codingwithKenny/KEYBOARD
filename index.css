@@ -1,0 +1,78 @@
+
+       .mother{
+        width: 350px;
+        height: 210px;
+        border: thin solid black;
+        margin: 50px auto;
+        background-color: aliceblue;
+       }
+       i{
+        margin-left:20px ;
+        
+       }
+       input{
+        width: 230px;
+        height: 23px;
+        border-radius: 20px;
+        overflow-y: auto;
+        overflow-wrap: break-word;
+       }
+       div i:nth-of-type(2){
+        margin-left: -30px;
+       }
+       .top{
+        margin-top: 10px;
+       }
+       button{
+        width: 30px;
+        border-radius: 5px;
+        background-color: black;
+        color: white;
+        font-size: 18px;
+       }
+       .firstrow{
+        margin-top: 30px;
+        margin-left: 5px;
+       }
+       .secondrow{
+        margin-left: 20px;
+        margin-top: 10px;
+       }
+       .thirdrow{
+        /* margin-left: 50px; */
+        margin-top: 10px;
+       }
+       .thirdrow button:nth-of-type(1){
+           background-color: white;
+           width: 40px;
+           margin-left: 5px;
+       }
+       .thirdrow button i:nth-of-type(1){
+           margin-left: 0;
+           color: black;
+           background-color: white;
+       }
+       .thirdrow button:nth-of-type(2){
+        margin-left: 10px;
+       }
+       .thirdrow button:nth-of-type(9){
+        background-color: white;
+        margin-left: 10px;
+       }
+       .thirdrow button:nth-of-type(9) i{
+        color: black;
+        margin-left: -4px;
+       }
+       .fourthrow{
+        margin-top: 8px;
+        margin-left: 5px;
+       }
+       .fourthrow button:nth-of-type(1){
+        width: 70px;
+       }
+       .fourthrow button:nth-of-type(2){
+        width: 180px;
+       }
+       .fourthrow button:nth-of-type(3){
+        width: 70px;
+       }
